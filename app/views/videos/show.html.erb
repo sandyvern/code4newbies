@@ -33,3 +33,20 @@
     </div>
 	</div>
 </div>	
+
+<!--<script src="http://fast.wistia.net/static/E-v1.js"></script>-->
+
+<script src="//fast.wistia.com/embed/medias/2z1nrub0qv.jsonp" async></script>
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<span class="wistia_embed wistia_async_2z1nrub0qv popover=true popoverAnimateThumbnail=true" 
+style="display:inline-block;height:84px;width:150px">&nbsp;</span>
+
+<script>
+  wistiaEmbed = Wistia.embed("<%= @video.wistia %>", {
+    videoQuality: "hd-only",
+    videoFoam: true
+  });
+  function setPlaySpeed(speed) {
+    wistiaEmbed.playbackRate(speed);
+  }
+</script>
