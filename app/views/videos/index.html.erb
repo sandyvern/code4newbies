@@ -2,7 +2,7 @@
 
 <h1>Listing Videos</h1>
 
-<%= link_to new_video_path, :class => 'btn-floating btn-large waves-effect waves-light red' do %>
+<%= link_to new_video_path, :class => 'btn-floating btn-large waves-effect teal lighten-2' do %>
   <i class="material-icons">add</i>
 <% end %>
 
@@ -16,7 +16,7 @@
           <%= link_to edit_video_path(video) do %>
             <i class="material-icons">create</i><% end %>
           <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="material-icons">event_busy</i><% end %>
+            <i class="material-icons">delete</i><% end %>
         </span>
       </div>
       <div class="collapsible-body"><p><%= video.description %></p></div>
