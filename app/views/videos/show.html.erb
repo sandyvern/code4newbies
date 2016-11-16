@@ -21,7 +21,18 @@
         <button class="btn btn-primary" onclick="setPlaySpeed(1.5)">1.5x</button>
         <button class="btn btn-primary" onclick="setPlaySpeed(2)">2x</button>
         <br/>
-        <span class="card-title"><%= @video.title %></span>
+        <span class="card-title"><%= @video.title %></span><br /> 
+        
+        <!-- Rating Stars - not quite functional -->
+        <span id="average_rating" title="Not rated yet!">
+          <img alt="1" src="/assets/star-on.png" title="gorgeous">&nbsp;
+          <img alt="2" src="/assets/star-on.png" title="gorgeous">&nbsp;
+          <img alt="3" src="/assets/star-on.png" title="gorgeous">&nbsp;
+          <img alt="4" src="/assets/star-off.png" title="Not rated yet!">&nbsp;
+          <img alt="5" src="/assets/star-off.png" title="Not rated yet!">
+          <input name="score" type="hidden" readonly="">
+        </span>
+        
         <p><%= @video.description %></p>
       </div>
       <div class="card-action">
@@ -36,10 +47,10 @@
 
 <!--<script src="http://fast.wistia.net/static/E-v1.js"></script>-->
 
-<script src="//fast.wistia.com/embed/medias/2z1nrub0qv.jsonp" async></script>
+<!--<script src="//fast.wistia.com/embed/medias/2z1nrub0qv.jsonp" async></script>-->
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<span class="wistia_embed wistia_async_2z1nrub0qv popover=true popoverAnimateThumbnail=true" 
-style="display:inline-block;height:84px;width:150px">&nbsp;</span>
+<!--<span class="wistia_embed wistia_async_2z1nrub0qv popover=true popoverAnimateThumbnail=true" -->
+<!--style="display:inline-block;height:84px;width:150px">&nbsp;</span>-->
 
 <script>
   wistiaEmbed = Wistia.embed("<%= @video.wistia %>", {
